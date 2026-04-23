@@ -1,6 +1,7 @@
 ## 需要安装的包
 
 ```bash
+hyprpaper
 stow 
 neovim
 fcitx5-im fcitx5-chinese-addons fcitx5-pinyin-zhwiki
