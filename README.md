@@ -1,26 +1,32 @@
-## 需要安装的包
+## Quickshell 脚本
+
+本仓库通过 **git submodule** 管理 quickshell 脚本（独立仓库：[syaofox/quickshell](https://github.com/syaofox/quickshell)）。
+
+### 克隆（含子模块）
 
 ```bash
-hyprpaper
-stow 
-neovim
-fcitx5-im fcitx5-chinese-addons fcitx5-pinyin-zhwiki
-fcitx5-configtool
-polkit-kde-agent
-rofi
-fcitx5-material-color
+git clone --recurse-submodules git@github.com:syaofox/hyper-quickshell.git
 ```
 
-yazi
+如果已经克隆了，拉取子模块：
 
+```bash
+git submodule update --init --recursive
 ```
-在 CachyOS (Arch 系) 上，执行：
-sudo pacman -S yazi ffmpeg 7zip jq poppler fd ripgrep fzf zoxide resvg imagemagick
-Wayland 下还需安装剪贴板支持：
-sudo pacman -S wl-clipboard
-如需最新 Git 版（通过 AUR）：
-paru -S yazi-git
-或者官方 nightly 二进制：
-paru -S yazi-nightly-bin
 
+### 更新子模块
+
+```bash
+cd dotfiles/.config/quickshell && git pull
+cd ../.. && git add dotfiles/.config/quickshell && git commit -m "update quickshell"
 ```
+
+### 部署
+
+使用 `stow`：
+
+```bash
+stow -t ~ dotfiles
+```
+
+quickshell 脚本会部署到 `~/.config/quickshell/`。
