@@ -21,6 +21,7 @@ PACMAN_packages=(
     hyprlock
     hypridle
     sddm
+    hyprlauncher
 )
   
 
