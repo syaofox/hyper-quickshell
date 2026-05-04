@@ -6,6 +6,12 @@ source "$(dirname "${BASH_SOURCE[0]}")/setup/utils.sh"
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 cd "$SCRIPT_DIR"
 
+# Keep sudo timestamp alive to avoid repeated password prompts
+sudo -v
+while true; do sudo -v; sleep 60; done &
+SUDO_KEEPALIVE_PID=$!
+trap 'kill $SUDO_KEEPALIVE_PID 2>/dev/null' EXIT
+
 # Function to ask user what to do on failure
 ask_on_failure() {
     local step_name="$1"
