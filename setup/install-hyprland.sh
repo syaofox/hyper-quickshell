@@ -27,6 +27,8 @@ PACMAN_packages=(
     hyprpicker
     libnotify
     # copyq
+    wl-clip-persist
+    cliphist
     
     wireplumber brightnessctl
 
