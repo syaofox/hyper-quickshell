@@ -5,6 +5,7 @@ source "$(dirname "${BASH_SOURCE[0]}")/utils.sh"
 log_step "Installing hyprland..."
 
 PACMAN_packages=(  
+    quickshell
     hyprland
     swaync
     kitty
