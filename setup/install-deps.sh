@@ -34,6 +34,14 @@ PACMAN_packages=(
     nfs-utils
     fuse3
 
+    nano
+    vim
+    openssh
+    htop
+    wget
+    smartmontools
+    xdg-utils
+
   
 
 )

@@ -20,6 +20,7 @@ PACMAN_packages=(
     slurp
     hyprlock
     hypridle
+    sddm
 )
   
 
@@ -29,6 +30,9 @@ if ! sudo pacman -S --needed --noconfirm "${PACMAN_packages[@]}"; then
     exit 1
 fi
 
+log_info "Enabling SDDM display manager..."
+if ! sudo systemctl enable sddm.service; then
+    log_error "Failed to enable SDDM service"
 
 log_info "Hyprland installation complete"
 exit 0
