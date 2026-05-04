@@ -24,6 +24,8 @@ PACMAN_packages=(
     sddm
     hyprlauncher
     wl-clipboard
+    hyprpicker
+    libnotify
 
 )
 
