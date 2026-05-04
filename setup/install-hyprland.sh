@@ -23,8 +23,13 @@ PACMAN_packages=(
     hypridle
     sddm
     hyprlauncher
+    wl-clipboard
+
 )
-  
+
+log_info "Creating screenshots directory..."
+
+mkdir -p ~/Pictures/Shots/
 
 log_info "Installing official packages..."
 if ! sudo pacman -S --needed --noconfirm "${PACMAN_packages[@]}"; then
