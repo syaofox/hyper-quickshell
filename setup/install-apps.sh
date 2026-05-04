@@ -48,8 +48,9 @@ AUR_PACKAGES=(
     clipster
     opencode-bin
     visual-studio-code-bin
-    brave-bin
-    mint-y-icons mint-themes 
+    brave-origin-nightly-bin
+    # brave-bin
+    # mint-y-icons mint-themes 
 )
 if command -v yay >/dev/null; then
     yay -S --needed --noconfirm "${AUR_PACKAGES[@]}" || log_warn "Some AUR packages failed to install"
